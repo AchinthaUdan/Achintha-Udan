@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced To-Do List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My To-Do List</h1>
+    
+    <!-- Task Input Section -->
+    <div class="input-section">
+      <input type="text" id="new-task" placeholder="Add a new task..." />
+      <select id="task-priority">
+        <option value="Low">Low Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+      </select>
+      <button onclick="addTask()">
+        <img src="https://img.icons8.com/ios/50/000000/add.png" alt="Add Task" />
+      </button>
+    </div>
+
+    <!-- List Management Buttons -->
+    <div class="buttons">
+      <button onclick="newList()">
+        <img src="https://img.icons8.com/ios/50/000000/plus.png" alt="New List" />
+        <span class="button-label">New</span>
+      </button>
+      <button onclick="saveList()">
+        <img src="https://img.icons8.com/ios/50/000000/save.png" alt="Save List" />
+      </button>
+    </div>
+
+    <!-- Saved Lists Dropdown -->
+    <select id="saved-lists" onchange="loadSelectedList()">
+      <option value="">-- Select Saved List --</option>
+    </select>
+
+    <!-- Task List -->
+    <ul id="task-list"></ul>
+  </div>
+
+  <!-- Credit Section -->
+  <footer>
+    <p>Created By <strong>Achintha Udan</strong></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
